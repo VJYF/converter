@@ -3,37 +3,29 @@ import pandas as pd
 import os
 import re
 
-
-n = 0
-
 # Get the list of all files and directories
 Newpath = os.path.dirname(__file__)
-
-print(Newpath)
-
 pathlist =os.path.join(Newpath,'csv\\') 
 dir_list = os.listdir(pathlist)
-
-print(pathlist)
 
 # Get all csv files of the path
 for x in os.listdir(pathlist):
     if x.endswith(".csv"):
 
-        # name = x.split("\.")
-        # stringname = x
+        # delete the .csv
         stringname = re.sub("\\..*","",x)
 
-        print(stringname)
-
         # Reading the csv file
-        df_new = pd.read_csv(pathlist+ x, sep=";", error_bad_lines='False', encoding='latin-1')
+        df_new = pd.read_csv(pathlist+ x, sep=";", on_bad_lines='skip', encoding='latin-1')
         
-        
-        mid = str(n)
+        # It will remplace the .csv
         end = '.xlsx'
+        
+        # Create a new directorie on our path
         if not os.path.exists(pathlist + '/ConvertDONE'):
             os.makedirs(pathlist + '/ConvertDONE')
+
+        # Get the path of ConvertDone's directories
         pathlist2 =os.path.join(Newpath,'csv\\ConvertDONE\\')
         print(pathlist2)
 
@@ -41,4 +33,4 @@ for x in os.listdir(pathlist):
         GFG = pd.ExcelWriter(pathlist2 + 'Converted_'+stringname+end )
         df_new.to_excel(GFG, index=False)
         GFG.save()
-        n += 1
+        
