@@ -1,0 +1,844 @@
+"Question","Answer","Categories","Tags"
+"Comment ajouter des tags qui s'auto-complètent dans les modèles de SMS?","Pour ajouter aux modèles de SMS des champs qui s’auto-complétent, rendez-vous dans<em><strong> Outils&gt;Configurer&gt;Configurer les modèles de SMS</strong></em> (menu en haut à droite). Ensuite, il faut soit ajouter un nouveau modèle, soit en éditer un existant.
+
+Vous pouvez ajouter un ou plusieurs champs parmi ceux cités ci-dessous entre des chevrons (<strong>&lt;</strong> et <strong>&gt;</strong>) dans le corps du message (ne recopiez que le texte entre les chevrons, ainsi que les chevrons eux-même.)
+
+<em>
+PROJECT.REFERENCE correspond à la référence du projet lié
+PROJECT.REFEXT correspond à la référence externe du projet lié
+PARTNER.LABEL correspond au libellé du partenaire
+DATEDOCUMENT correspond à la date du document</em>
+
+Exemple:
+
+« Bonjour Mr/Mme ‹PARTNER.LABEL›, vous pouvez venir rechercher votre machine dans notre magasin. »","Paramètres et Préférences",""
+"Comment configurer une nouvelle année fiscale dans eCust?","Pour configurer une nouvelle année fiscale, rendez-vous dans<em><strong> Outils&gt;Configurer&gt;Listes comptables&gt;Configurer les années fiscales </strong></em>(menu en haut à droite).
+
+Veuillez noter que vous devrez vous connecter depuis un compte disposant de droits d'administration, les <em>Outils</em> n'étant pas accessibles sans ces derniers.
+
+-Cliquez sur le bouton en forme d'androïde dans le menu latéral droit.
+
+-L'année devrait être précomplétée. Sinon, modifiez le contenu du champ.
+
+-Sélectionnez le type de périodes, entre <em>trimestrielles</em> et <em>mensuelles</em>. Si vous aviez le moindre doute quant à quoi choisir, vous pouvez consulter les périodes des années précédentes dans<em><strong> Outils&gt;Configurer&gt;Listes comptables&gt;Configurer les périodes </strong></em>(menu en haut à droite).
+
+-Cliquez sur Ok pour sauvegarder.
+
+L'année fiscale sera créée, ainsi que les périodes et compteurs des documents qui y sont liés. Vous pourrez directement commencer à valider les documents pour l'année que vous venez de configurer.
+
+&nbsp;","Paramètres et Préférences",""
+"Je n'ai pas de type de paiement configuré","Cela peut notamment avoir pour effet de vous empêcher de valider le paiement de vos factures, car la sélection d'un type de paiement est obligatoire.
+
+Vous pouvez configurer cela dans <strong>Outils&gt;Configurer&gt;Listes comptables&gt;Configurer les types de paiement</strong><em> (menu en haut à droite).
+
+
+</em>Là, vous pouvez cliquer sur le bouton ""+"" pour ajouter un nouveau type de paiement. Seul le champ libellé est nécessaire, les autres sont optionnels.","Paramètres et Préférences",""
+"Comment récupérer toutes les adresses mail des Partenaires/Contacts?","Il est possible d'extraire les adresses mail via un export Excel. Pour ce faire, rendez-vous dans la signalétique désirée (Partenaires ou Contacts) via le bouton <em><strong>Signalétiques</strong></em> en haut à droite de votre écran.
+
+Ensuite, dans le menu latéral droit de la signalétique, il y a un bouton représentant des engrenages, qui affiche un sous-menu. Sélectionnez l'option <em><strong>Exporter</strong></em>. Cela vous permettra de télécharger un fichier au format Excel reprenant toutes les informations concernant les Partenaires/Contacts encodées dans eCust. Dans ce fichier, vous serez libre de supprimer les colonnes superflues.
+
+Les libellés des colonnes qui vous seront utiles sont:
+
+<strong>Export partenaires :</strong>
+-Label<em>, correspond au libellé du partenaire</em>
+-Email<em>, correspond à l'adresse mail</em>
+
+<strong>Export contacts :</strong>
+-Firstnamel<em>, correspond au </em> <em>prénom</em>
+-Lastnamel<em>, correspond au </em> <em>nom</em>
+-Partner.label<em>, correspond au</em> <em> libellé du partenaire lié au contact</em>
+-mailOfficel<em>, correspond à l'email professionnel</em>
+-mailPrivatel<em>, correspond à l'email privé</em>","Contacts,Partenaires",""
+"Comment ajouter des tags qui s'auto-complètent dans les mails de rappel?","Pour ajouter aux modèles de mails de rappel des champs qui s’auto-compléteront avec les données du document, rendez-vous dans<em><strong> Outils&gt;Paramètres applicatifs&gt;Rappels</strong></em> (menu en haut à droite).
+
+Vous pouvez ajouter un ou plusieurs champs parmi ceux cités ci-dessous entre des chevrons (<strong>&lt;</strong> et <strong>&gt;</strong>), aussi bien dans le sujet que dans le corps du mail (ne recopiez que le texte entre les chevrons, ainsi que les chevrons eux-même.)
+
+<em>REFERENCE correspond à la référence du document
+REFINT correspond à la référence interne du document
+REFEXT correspond à la référence externe du document
+PROJECT.REFERENCE correspond à la référence du projet lié
+PROJECT.REFEXT correspond à la référence externe du projet lié
+PARTNER.LABEL correspond au libellé du partenaire
+DATEDOCUMENT correspond à la date du document
+DATEDUE correspond à la date d'échéance de la facture
+TOTALVATI correspond au total du document TVAC
+TOTALVATE correspond au Total du document HTVA
+TOTALVAT correspond au Total de la TVA
+PRODUCT.REFERENCE correspond à la référence du produit
+PRODUCT.LABEL correspond au libellé du produit
+PRODUCT.BRAND correspond à la marque du produit
+VCS correspond à la communication structurée du virement</em>
+
+Exemple:
+
+« Nous nous permettons de vous contacter afin de vous rappeler que vous avez une facture d'un montant de ‹TOTALVATI› auprès de nous. »
+
+&nbsp;","Paramètres et Préférences",""
+"Pourquoi certains de mes projets sont-ils barrés dans la Signalétique?","Les projets apparaissent barrés lorsque leur statut est à ""<em>Fermé</em>"" mais ne sont pas masqué par défaut, contrairement aux Partenaires ou Contacts désactivés. En effet, dans ce cas, le statut ""<em>Fermé</em>"" ne correspond pas forcément à un statut d'annulation/désactivation.","Projets",""
+"Quels paramètres sont utilisables dans un rapport eCust?","Ces paramètres sont à intégrer dans le fichier JRXML du rapport, éditable via le programme Jaspersoft Studio.
+
+""PARAM_ID"" -&gt; <em>Identifiant unique du document sur lequel porte le rapport</em>
+""PARAM_ID_LIST"" -&gt; <em>Liste des identifiants des documents sur lesquels porte le rapport</em>
+""PARAM_SUBREPORT_DIR"" -&gt; <em>Dossier contenant les sous-rapports</em>
+""PARAM_LANGUAGE"" -&gt; <em>Langue de l’utilisateur connecté (FR / UK / NL)</em>
+""PARAM_DATEYEAR"" -&gt; <em>Date indiquée dans le paramètre « année » par l’utilisateur</em>
+""PARAM_STARTDATE"" -&gt; <em>Date de départ indiquée dans le paramètre « année » par l’utilisateur</em>
+""PARAM_ENDDATE"" -&gt; <em>Date de fin indiquée dans le paramètre « année » par l’utilisateur</em>
+""PARAM_EXACTDATE"" -&gt; <em>Date précise indiquée dans le paramètre « année » par l’utilisateur</em>
+""PARAM_STARTNUMBER"" -&gt; <em>Numéro de départ indiqué dans le paramètre « année » par l’utilisateur</em>
+""PARAM_ENDNUMBER"" -&gt; <em>Numéro final indiquée dans le paramètre « année » par l’utilisateur</em>","Paramètres et Préférences",""
+"Comment puis-je automatiquement ajouter un destinataire caché lors de l'envoi d'un mail?","Il est possible de faire en sorte que dès qu'un utilisateur envoie un mail via eCust, une copie cachée soit envoyée à une autre adresse email.
+
+Pour paramétrer cela, rendez-vous dans <em><strong>Outils &gt; </strong></em><em><strong>Avancé &gt; Liste des paramètres avancés</strong></em> et cliquez sur le bouton ""+"" à droite pour ajouter un nouveau paramètre.
+
+Complétez les 3 champs disponibles comme suit:
+
+Login: login de l'utilisateur duquel doivent être émis les mails
+
+Nom: ""user.default-bcc-mail"" (sans les guillemets)
+
+Valeur: adresse email du destinataire de la copie cachée du mail
+
+&nbsp;","Paramètres et Préférences",""
+"Comment ajouter des tags qui s'auto-complètent dans les mails?","Pour ajouter aux modèles de mails des champs qui s'auto-compléteront avec les données du document, rendez-vous dans <em><strong>[nom d’utilisateur]&gt;Préférences&gt;Textes Emails </strong></em>(menu en haut à droite).
+
+Vous pouvez ajouter un ou plusieurs champs parmi ceux cités ci-dessous entre des chevrons (<strong>&lt;</strong> et <strong>&gt;</strong>), aussi bien dans le sujet que dans le corps du mail (ne recopiez que le texte entre les chevrons, ainsi que les chevrons eux-même.)
+
+REFERENCE <em>correspond à la référence du document</em>
+REFINT<em> correspond à la référence interne du document</em>
+REFEXT <em>correspond à la référence externe du document</em>
+PROJECT.REFERENCE <em>correspond à la référence du projet lié</em>
+PROJECT.REFEXT <em>correspond à la référence externe du projet lié</em>
+PARTNER.LABEL <em>correspond au libellé du partenaire</em>
+DATEDOCUMENT <em>correspond à la date du document
+</em><em>DATEDUE correspond à la date d'échéance de la facture
+TOTALVATI correspond au total du document TVAC
+TOTALVATE correspond au Total du document HTVA
+TOTALVAT correspond au Total de la TVA
+PRODUCT.REFERENCE correspond à la référence du produit
+PRODUCT.LABEL correspond au libellé du produit
+PRODUCT.BRAND correspond à la marque du produit
+VCS correspond à la communication structurée du virement
+WEBPAIEMENT paiement par le module de paiement en ligne Mollie
+</em>
+
+Exemple:
+
+""Nous vous remercions pour votre commande. Celle-ci est bien enregistrée sous la référence ‹REFERENCE›.""","Paramètres et Préférences",""
+"Comment puis-je modifier l'extension d'un fichier généré depuis eCust?","Pour ce faire, allez dans <em><strong>Outils &gt; Avancé &gt; Liste des paramètres avancés</strong></em>.
+
+Ajoutez un nouveau paramètre via le bouton ""Ajouter"" et complétez comme suit:
+
+-Login : [insérez l'adresse mail de l'utilisateur désiré] Si tous les utilisateurs son concernés, tapez simplement <strong>app</strong>
+
+-Nom Complet : <strong>document.extension.replace.</strong>[insérez l'extension à remplacer]
+
+-Value : [insérez la nouvelle extension à utiliser, sans point]
+
+Enregistrez avant de quitter.
+
+&nbsp;
+
+<em>Exemple : si nous désirions faire en sorte que l'utilisateur Michel, se connectant avec l'identifiant michel@exemple.be, voie ses fichiers .msg (fichier mail) générés en tant que .emsg lorsqu'il appuie sur le bouton d'envoi de mail, il faudrait encoder les valeurs suivantes:</em>
+
+<em>-Login: michel@exemple.be</em>
+
+<em>-Nom Complet: document.extension.replace.msg</em>
+
+<em>-Value: emsg</em>","Paramètres et Préférences",""
+"Je n'arrive pas à supprimer de Contact","Contrairement aux Partenaires et Produits, un Contact peut être supprimé par l'Utilisateur, aussi longtemps qu'il n'est lié à aucun Projet ou Document.
+
+L'impossibilité de supprimer un Contact lié à un Projet ou Document est une sécurité visant à protéger l’intégrité des documents précédemment générés. Le seul moyen de la contourner sans risque est de fusionner les Contacts.
+Pour se faire, maintenez Majuscule/Control sur votre clavier afin de sélectionner plusieurs Contacts. Ensuite, effectuez un clic droit dessus et sélectionnez « Fusionner les contacts ». Attention, cette action est irréversible.","Contacts",""
+"Que puis-je encore modifier dans un document dont le statut est ""Open"" ou ""Closed""?","Comme spécifié dans <em><strong>Je n'arrive pas à éditer mes documents</strong></em>, le contenu des champs d'un document validé et/ou fermé ne peut être édité à moins de ne le ré-ouvrir et re-passer en brouillon. Cependant, il existe quelques exceptions.
+
+Voici la liste des champs qui peuvent être édités :
+-Libellé
+-Département
+-Projet
+-Onglet <em><strong>C</strong><strong>omptabilité</strong></em> :
+Créateur
+Représentant
+Adresse de facturation
+Taux de TVA
+Délai de validité d'offre
+Terme de paiement
+Conditions de paiement
+-Tous les champs de l'onglet <em><strong>Livraison</strong></em>
+-L'onglet <em><strong>Description</strong></em>
+
+&nbsp;","Documents",""
+"Quelle est la différence entre Fournisseur, Suspect, Prospect, Client et Client dormant?","Ces cases, cochables dans l'Edition d'un partenaire, permettent de définir le statut de vos Partenaires et de les trier d'un simple clic dans la Signalétique appropriée.
+Le <strong>Fournisseur</strong> est le partenaire auprès duquel vous vous fournissez en matériel et marchandises. Typiquement, un grossiste. Les documents échangés avec lui le seront via la Signalétique <em>""Documents Fournisseurs""</em>.
+
+Le <strong>Suspect</strong> est un partenaire avec lequel vous pourriez avoir affaire dans le futur. Rien n'a encore été échangé entre vous.
+
+Le <strong>Prospect</strong> est le partenaire auquel une offre de prix (Devis) a déjà été envoyée, mais duquel aucune réponse positive n'a encore été reçue.
+
+Le <strong>Client</strong> est le partenaire avec lequel vous êtes en affaire, auquel vous avez envoyé un ou plusieurs des documents suivants: Commande, Livraison, Facture et Note de crédit.
+
+Le <strong>Client</strong><strong> dormant</strong> est un <strong>Client</strong> avec lequel vous n'avez plus fait affaire depuis un certain temps. Afin de continuer à avoir accès aux documents liés au dit partenaire, il vous faudra laisser la case <strong>Client</strong> cochée.
+
+Les cases doivent être modifiées une à une à la main. Cependant, si vous aviez besoin de faire une modification de masse parmi vos partenaires (exemple: définir comme dormant tous les Clients  avec lesquels vous n'avez plus eu de contact depuis plus d'un an), des procédures automatisées peuvent être mises en place. Pour se faire, n'hésitez pas à contacter notre support.
+Laisser plusieurs cases cochées simultanément ne pose aucun souci.","",""
+"Comment accéder aux documents?","Il existe plusieurs méthodes, que nous allons citer ici:
+
+1) Via les Signalétiques:
+Survolez l'onglet <em><strong>Signalétiques</strong></em>. Vos documents seront répartis entre <em><strong>Docs Fournisseurs</strong></em> et <em><strong>Docs clients</strong></em>, selon leur type (devis, commande,...)
+Cette méthode permet une bonne vision d'ensemble.
+
+2) Via la Fiche du Partenaire
+Survolez l'onglet <em><strong>Signalétiques</strong></em> et sélectionnez <em><strong>Liste des partenaires</strong></em>.
+Ceci permet de se focaliser directement sur les documents liés à ce partenaire à l'exclusion de tous les autres. Note: le même principe s'applique à la <em><strong>Liste des contacts</strong></em>,<em><strong> Liste des départements</strong></em> et <em><strong>Liste des projets</strong></em>.
+
+3) Via l'onglet Acces Rapide, à gauche sur votre écran.
+(voir <em><strong>Comment puis-je modifier les Actions Rapides dans la barre latérale?</strong></em> pour le configurer)","Documents",""
+"Je n'ai pas accès au menu ""Outils""","Ceci vient du fait que l'accès à ce menu est réservé aux utilisateurs administrateurs. Pour y avoir accès, il vous faudra passer par un tel compte.","Paramètres et Préférences",""
+"Mes changements de paramètres ne sont pas pris en compte","Les modifications n'ont pas été mise à jour dans eCust car ce dernier n'effectue ses rafraîchissements qu'à certains moments particuliers.
+Voici les manipulations à effectuer afin de les forcer, à tester l'une après l'autre:
+
+A) Fermez et rouvrez l'onglet concerné
+B) Allez dans <strong><em>Outils &gt; Nettoyer les caches</em></strong> <em>(NB: Seuls les utilisateurs administrateurs ont accès au menu <strong>Outils</strong>)</em>
+C) Actualisez la fenêtre du navigateur
+D) Déconnectez-vous puis reconnectez-vous à eCust","Paramètres et Préférences",""
+"Comment puis-je modifier les Actions Rapides dans la barre latérale?","Les options de modification se trouvent dans <em><strong>[nom d’utilisateur] &gt; </strong></em><em><strong>Préférences &gt; Actions rapides</strong></em>, sous forme de cases à cocher.
+
+Afin que les modifications prennent effet, il faudra vous déconnecter-reconnecter de votre compte eCust.","Paramètres et Préférences",""
+"Je voudrais ajouter/supprimer des colonnes dans la fiche d'un Partenaire","Pour ce faire, allez dans <em><strong>[nom d’utilisateur]&gt;</strong></em><em><strong>Préférences&gt;Partenaires</strong></em> et cochez/décochez les colonnes de votre choix.
+
+Afin que les modifications prennent effet, il faudra fermer toutes les Fiches de Partenaires en cours et actualiser l'onglet du navigateur internet, voire vous déconnecter-reconnecter de votre compte eCust.","Partenaires",""
+"Quelle est la différence entre ""Paramètres applicatifs"" et ""Préférences""?","Les Paramètres Applicatifs, situés dans <strong><em>Outils&gt;Paramètres Applicatifs</em></strong>, affectent l'ensemble des comptes eCust de votre société. Les Préférences, situées dans <em><strong>[nom d'utilisateur]&gt;Préférences</strong></em>, affectent votre compte personnel, sans affecter celui de vos collègues.
+
+Veuillez noter que tous les utilisateurs n'ont pas les droits d'accéder aux Paramètres Applicatifs, seuls les utilisateurs administrateurs ayant accès au menu <em><strong>Outils</strong></em>.","Paramètres et Préférences",""
+"Quelle est la différence entre un Partenaire et un Contact?","Le Partenaire représente généralement la société avec laquelle vous faites affaire. Le Contact représente la personne physique qui fait partie de ladite société. Il peut y avoir plusieurs Contacts liés à un seul Partenaire, mais pas l'inverse.
+
+Dans le cas d'une personne physique ne travaillant pour aucune société, le plus simple est de l'enregistrer comme Partenaire. Vous pourrez lui adjoindre un Contact du même nom si vous veniez à avoir besoin de remplir certains champs spécifiques au Contact.","Contacts,Partenaires",""
+"Je n’arrive pas à supprimer de Produit","Il s’agit d’une sécurité visant à protéger l’intégrité des documents précédemment générés. Deux solutions s’offrent à vous :
+1) Fusionner/convertir les Produits : maintenez la touche Control de votre clavier pour sélectionner plusieurs Produits, puis effectuez un clic droit dessus et sélectionnez « Fusionner les produits ». Attention, cette action est irréversible.
+2) Si vous désirez une suppression pure et dure d’un Produit auquel aucun document n’est lié (créé par erreur, par exemple), contactez le support eCust. Un de nos techniciens se chargera de la suppression manuellement.","Produits",""
+"Je n’arrive pas à supprimer de Partenaire","Il s’agit d’une sécurité visant à protéger l’intégrité des documents précédemment générés. Deux solutions s’offrent à vous :
+1) Fusionner les Partenaires : maintenez Majuscule/Control sur votre clavier afin sélectionner plusieurs Partenaires. Ensuite, effectuez un clic droit dessus et sélectionnez « Fusionner les partenaires » ou « Convertir en département d’un autre partenaire ». Attention, cette action est irréversible.
+2) Si vous désirez une suppression pure et dure d’un Partenaire auquel aucun document n’est lié (créé par erreur, par exemple), contactez le support eCust. Un de nos techniciens se chargera de la suppression manuellement.","Partenaires",""
+"Je ne vois pas d’anciens documents dans la Signalétique","Par souci d’ergonomie, eCust n’affiche pas les documents au-delà d’une certaine limite.
+Pour les afficher une seule fois, cliquez sur le bouton en forme d’engrenages à la droite de la liste des documents et séléctionnez <em>« Tout montrer ».</em> Tous vos documents s’afficheront alors jusqu’à la fermeture d’eCust.
+Pour les afficher à chaque fois que vous vous connecterez, allez dans <strong><em>Outils &gt; Paramètres applicatifs &gt; Tâche</em></strong> et modifiez le champ « <em>Limite de temps sur la Liste (mois) »</em>. Vous pouvez y inscrire une valeur extrêmement élevée afin de vous assurer que tous les documents s’afficheront bien.","Documents",""
+"Je voudrais ajouter une colonne dans une des Signalétiques","Que ce soit pour les Produits, Devis, Factures, Contacts, Partenaires et autres, le fonctionnement est identique.
+
+Lorsque vous êtes dans la Signalétique, placez votre curseur dans le coin supérieur droit. Une petite icône en forme d’engrenage devrait apparaître. Cliquer dessus fera apparaître un menu qui vous permettra de choisir quelles colonnes afficher ou masquer.
+Vous pouvez organiser les colonnes à votre guise par glisser-déposer. Dans ce cas et afin que cela soit sauvegardé, veillez simplement à changer la largeur de n’importe laquelle des colonnes du tableau, ne fût-ce que d’un millimètre.","Contacts,Documents,Partenaires,Produits",""
+"Je n’arrive pas à éditer mes documents","Vérifiez le statut du document. Dans la Signalétique, il s’agit d’une colonne, les différents statuts étant <em>« Closed » </em>(Fermé), <em>« Open »</em> (Ouvert) et <em>« Draft »</em> (Brouillon). Les Documents Ouverts ou Fermés ne peuvent être modifiés, vous devez pour ce faire les repasser en Brouillon.
+Pour passer un Document de Fermé à Ouvert, sélectionnez le document dans la Signalétique, cliquez sur l’icône en forme d’engrenages à la droite et sélectionnez l'option <em>« Ré-Ouvrir »</em>.
+Ensuite, pour passer un Document de Ouvert en Brouillon, ouvrez l'éditeur du Document et cliquez sur l’icône en forme de pouce vers le bas pour le dé-valider.
+
+Une fois les modifications terminées, vous pouvez remettre le Document à son statut d’origine. Il suffit de refaire les manipulations dans l’ordre inverse, c’est-à-dire cliquer sur le pouce vers le haut pour passer le document de Brouillon à Ouvert et sélectionner <em>« Fermer »</em> pour le passer de Ouvert à Fermé.","Documents",""
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html xmlns="http://www.w3.org/1999/xhtml" class="ie8 wp-toolbar"  lang="fr-FR">
+<![endif]-->
+<!--[if !(IE 8) ]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" class="wp-toolbar"  lang="fr-FR">
+<!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ultimate FAQs &lsaquo; Logiciel de gestion d&#039;entreprise pour indépendant, TPE, et PME &#8212; WordPress</title>
+<script type="text/javascript">
+addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+var ajaxurl = '/wp-admin/admin-ajax.php',
+	pagenow = 'toplevel_page_EWD-UFAQ-Options',
+	typenow = '',
+	adminpage = 'toplevel_page_EWD-UFAQ-Options',
+	thousandsSeparator = ' ',
+	decimalPoint = ',',
+	isRtl = 0;
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' href='https://ecust.eu/wp-admin/load-styles.php?c=0&amp;dir=ltr&amp;load%5B%5D=dashicons,admin-bar,common,forms,admin-menu,dashboard,list-tables,edit,revisions,media,themes,about,nav-menus,wp-pointer,widgets&amp;load%5B%5D=,site-icon,l10n,buttons,wp-auth-check&amp;ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.9.4' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='ie-css'  href='https://ecust.eu/wp-admin/css/ie.min.css?ver=4.9.4' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='yoast-seo-admin-global-css'  href='https://ecust.eu/wp-content/plugins/wordpress-seo-premium/css/dist/admin-global-830.min.css?ver=8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='yoast-seo-dismissible-css'  href='https://ecust.eu/wp-content/plugins/wordpress-seo-premium/css/dist/wpseo-dismissible-830.min.css?ver=8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='thickbox-css'  href='https://ecust.eu/wp-includes/js/thickbox/thickbox.css?ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='yoast-seo-adminbar-css'  href='https://ecust.eu/wp-content/plugins/wordpress-seo-premium/css/dist/adminbar-830.min.css?ver=8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-smushit-admin-css-css'  href='https://ecust.eu/wp-content/plugins/wp-smushit/assets/css/wp-smushit-admin.css?ver=2.7.8' type='text/css' media='all' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/ecust.eu\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<script type='text/javascript'>
+/* <![CDATA[ */
+var wp_smush_msgs = {"resmush":"Super-Smush","smush_now":"Smush Now","error_in_bulk":"{{errors}} image(s) were skipped due to an error.","all_resmushed":"All images are fully optimized.","restore":"Restoring image..","smushing":"Smushing image..","checking":"Checking images..","membership_valid":"We successfully verified your membership, all the Pro features should work completely. ","membership_invalid":"Your membership couldn't be verified.","missing_path":"Missing file path.","unfinished_smush_single":"image could not be smushed.","unfinished_smush":"images could not be smushed.","already_optimised":"Already Optimized","ajax_error":"Ajax Error","all_done":"All Done!","quick_setup_title":"QUICK SETUP<form method=\"post\" class=\"smush-skip-setup float-r\"><input type=\"hidden\" name=\"action\" value=\"skipSmushSetup\"\/><input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"ff5837b9fd\" \/><input type=\"hidden\" name=\"_wp_http_referer\" value=\"\/wp-admin\/admin.php?page=EWD-UFAQ-Options&DisplayPage=Export&Action=EWD_UFAQ_ExportToSpreadsheet\" \/><button type=\"submit\" class=\"button button-small button-secondary skip-button\">Skip<\/button><\/form>","sync_stats":"Give us a moment while we sync the stats."};
+var wp_smushit_data = {"count_supersmushed":"","count_smushed":"","count_total":"","count_images":"","unsmushed":"","resmush":"","savings_bytes":"","savings_resize":"","savings_conversion":"","savings_supersmush":"","pro_savings":"","resize_sizes":{"width":"1024","height":"1024"},"timeout":"90000"};
+/* ]]> */
+</script>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var userSettings = {"url":"\/","uid":"1","time":"1651051059","secure":"1"};/* ]]> */
+</script>
+<script type='text/javascript' src='https://ecust.eu/wp-admin/load-scripts.php?c=0&amp;load%5B%5D=jquery-core,jquery-migrate,utils,moxiejs,plupload&amp;ver=4.9.4'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-content/plugins/ultimate-faqs/js/sorttable.js?ver=4.9.4'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-content/plugins/ultimate-faqs/js/Admin.js?ver=1.6.17'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-content/plugins/ultimate-faqs/js/spectrum.js?ver=4.9.4'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-content/plugins/wp-smushit/assets/js/wp-smushit-admin.js?ver=2.7.8'></script>
+<!--[if lt IE 8]>
+<script type='text/javascript' src='https://ecust.eu/wp-includes/js/json2.min.js?ver=2015-05-03'></script>
+<![endif]-->
+<script type='text/javascript'>
+var mejsL10n = {"language":"fr","strings":{"mejs.install-flash":"Vous utilisez un navigateur qui n\u2019a pas le lecteur Flash activ\u00e9 ou install\u00e9. Veuillez activer votre extension Flash ou t\u00e9l\u00e9charger la derni\u00e8re version \u00e0 partir de cette adresse\u00a0: https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen-off":"Quitter le plein \u00e9cran","mejs.fullscreen-on":"Passer en plein \u00e9cran","mejs.download-video":"T\u00e9l\u00e9charger la vid\u00e9o","mejs.fullscreen":"Plein \u00e9cran","mejs.time-jump-forward":["Saut en avant d\u20191 seconde","Avancer de %1 secondes"],"mejs.loop":"Lire en boucle","mejs.play":"Lecture","mejs.pause":"Pause","mejs.close":"Fermer","mejs.time-slider":"Curseur de temps","mejs.time-help-text":"Utilisez les fl\u00e8ches droite\/gauche pour avancer d\u2019une seconde, haut\/bas pour avancer de dix secondes.","mejs.time-skip-back":["Revenir une seconde en arri\u00e8re","Saut en arri\u00e8re de %1 seconde(s)"],"mejs.captions-subtitles":"L\u00e9gendes\/Sous-titres","mejs.captions-chapters":"Chapitres","mejs.none":"Aucun","mejs.mute-toggle":"Couper le son","mejs.volume-help-text":"Utilisez les fl\u00e8ches haut\/bas pour augmenter ou diminuer le volume.","mejs.unmute":"R\u00e9activer le son","mejs.mute":"Muet","mejs.volume-slider":"Curseur de volume","mejs.video-player":"Lecteur vid\u00e9o","mejs.audio-player":"Lecteur audio","mejs.ad-skip":"Passer la publicit\u00e9","mejs.ad-skip-info":["Passer dans %1 seconde","Passer dans %1 secondes"],"mejs.source-chooser":"S\u00e9lecteur de source","mejs.stop":"Arr\u00eater","mejs.speed-rate":"Taux de vitesse","mejs.live-broadcast":"\u00c9mission en direct","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanais","mejs.arabic":"Arabe","mejs.belarusian":"Bi\u00e9lorusse","mejs.bulgarian":"Bulgare","mejs.catalan":"Catalan","mejs.chinese":"Chinois","mejs.chinese-simplified":"Chinois (simplifi\u00e9)","mejs.chinese-traditional":"Chinois (traditionnel)","mejs.croatian":"Croate","mejs.czech":"Tch\u00e8que","mejs.danish":"Danois","mejs.dutch":"N\u00e9erlandais","mejs.english":"Anglais","mejs.estonian":"Estonien","mejs.filipino":"Filipino","mejs.finnish":"Terminer","mejs.french":"Fran\u00e7ais","mejs.galician":"Galicien","mejs.german":"Allemand","mejs.greek":"Grec","mejs.haitian-creole":"Cr\u00e9ole ha\u00eftien","mejs.hebrew":"H\u00e9breu","mejs.hindi":"Hindi","mejs.hungarian":"Hongrois","mejs.icelandic":"Islandais","mejs.indonesian":"Indon\u00e9sien","mejs.irish":"Irlandais","mejs.italian":"Italien","mejs.japanese":"Japonais","mejs.korean":"Cor\u00e9en","mejs.latvian":"Letton","mejs.lithuanian":"Lituanien","mejs.macedonian":"Mac\u00e9donien","mejs.malay":"Malais","mejs.maltese":"Maltais","mejs.norwegian":"Norv\u00e9gien","mejs.persian":"Perse","mejs.polish":"Polonais","mejs.portuguese":"Portugais","mejs.romanian":"Roumain","mejs.russian":"Russe","mejs.serbian":"Serbe","mejs.slovak":"Slovaque","mejs.slovenian":"Slov\u00e9nien","mejs.spanish":"Espagnol","mejs.swahili":"Swahili","mejs.swedish":"Su\u00e9dois","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turc","mejs.ukrainian":"Ukrainien","mejs.vietnamese":"Vietnamien","mejs.welsh":"Ga\u00e9lique","mejs.yiddish":"Yiddish"}};
+</script>
+<script type='text/javascript' src='https://ecust.eu/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.6-78496d1'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=4.9.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+/* ]]> */
+</script>
+		<script type="text/javascript">
+			var revslider_shortcodes = ['[rev_slider Home_Slider]'];
+		</script>
+		<script type='text/javascript'>var ufaq_premium = 'Yes';
+var ufaq_categories = {"0":{"term_id":63,"name":"Contacts","slug":"contacts","term_group":0,"term_taxonomy_id":67,"taxonomy":"ufaq-category","description":"","parent":0,"count":4,"filter":"raw"},"2":{"term_id":61,"name":"Documents","slug":"documents","term_group":0,"term_taxonomy_id":65,"taxonomy":"ufaq-category","description":"","parent":0,"count":5,"filter":"raw"},"3":{"term_id":66,"name":"Param\u00e8tres et Pr\u00e9f\u00e9rences","slug":"parametres-et-preferences","term_group":0,"term_taxonomy_id":70,"taxonomy":"ufaq-category","description":"","parent":0,"count":12,"filter":"raw"},"4":{"term_id":62,"name":"Partenaires","slug":"partenaires","term_group":0,"term_taxonomy_id":66,"taxonomy":"ufaq-category","description":"","parent":0,"count":5,"filter":"raw"},"5":{"term_id":65,"name":"Produits","slug":"produits","term_group":0,"term_taxonomy_id":69,"taxonomy":"ufaq-category","description":"","parent":0,"count":2,"filter":"raw"},"6":{"term_id":344,"name":"Projets","slug":"projets","term_group":0,"term_taxonomy_id":344,"taxonomy":"ufaq-category","description":"","parent":0,"count":1,"filter":"raw"}};
+</script>			<style type="text/css">
+			</style>
+			<style type='text/css'>#wpseo_content_top{ padding-left: 0; margin-left: 0; }</style>    <script type="text/javascript">
+    jQuery(function(){
+    	
+        var message = '<p>This theme comes with an <a href="https://ecust.eu/wp-admin/admin.php?page=optionsframework">options panel</a> to configure settings. This theme also supports widgets, please visit the <a href="https://ecust.eu/wp-admin/widgets.php">widgets settings page</a> to configure them.</p>';
+    	jQuery('.themes-php #message2').html(message);
+    
+    });
+    </script>
+    	<link id="wp-admin-canonical" rel="canonical" href="https://ecust.eu/wp-admin/admin.php?page=EWD-UFAQ-Options&#038;DisplayPage=Export&#038;Action=EWD_UFAQ_ExportToSpreadsheet" />
+	<script>
+		if ( window.history.replaceState ) {
+			window.history.replaceState( null, null, document.getElementById( 'wp-admin-canonical' ).href + window.location.hash );
+		}
+	</script>
+<script type="text/javascript">var _wpColorScheme = {"icons":{"base":"#82878c","focus":"#00a0d2","current":"#fff"}};</script>
+<link rel="icon" href="https://ecust.eu/wp-content/uploads/2018/03/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://ecust.eu/wp-content/uploads/2018/03/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://ecust.eu/wp-content/uploads/2018/03/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://ecust.eu/wp-content/uploads/2018/03/cropped-favicon-270x270.png" />
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+</head>
+<body class="wp-admin wp-core-ui no-js  toplevel_page_EWD-UFAQ-Options auto-fold admin-bar branch-4-9 version-4-9-4 admin-color-fresh locale-fr-fr no-customize-support no-svg">
+<script type="text/javascript">
+	document.body.className = document.body.className.replace('no-js','js');
+</script>
+
+	<!--[if lte IE 8]>
+		<script type="text/javascript">
+			document.body.className = document.body.className.replace( /(^|\s)(no-)?customize-support(?=\s|$)/, '' ) + ' no-customize-support';
+		</script>
+	<![endif]-->
+	<!--[if gte IE 9]><!-->
+		<script type="text/javascript">
+			(function() {
+				var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+						request = true;
+		
+				b[c] = b[c].replace( rcs, ' ' );
+				// The customizer requires postMessage and CORS (if the site is cross domain)
+				b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+			}());
+		</script>
+	<!--<![endif]-->
+	
+<div id="wpwrap">
+
+<div id="adminmenumain" role="navigation" aria-label="Menu principal">
+<a href="#wpbody-content" class="screen-reader-shortcut">Aller au contenu principal</a>
+<a href="#wp-toolbar" class="screen-reader-shortcut">Aller à la barre d’outils</a>
+<div id="adminmenuback"></div>
+<div id="adminmenuwrap">
+<ul id="adminmenu">
+
+
+	<li class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" id="menu-dashboard">
+	<a href='index.php' class="wp-first-item wp-has-submenu wp-not-current-submenu menu-top menu-top-first menu-icon-dashboard menu-top-last" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-dashboard'><br /></div><div class='wp-menu-name'>Tableau de bord</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Tableau de bord</li><li class="wp-first-item"><a href='index.php' class="wp-first-item">Accueil</a></li><li><a href='update-core.php'>Mises à jour <span class='update-plugins count-12'><span class='update-count'>12</span></span></a></li></ul></li>
+	<li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-post open-if-no-js menu-top-first" id="menu-posts">
+	<a href='edit.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-post open-if-no-js menu-top-first" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-post'><br /></div><div class='wp-menu-name'>Articles</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Articles</li><li class="wp-first-item"><a href='edit.php' class="wp-first-item">Tous les articles</a></li><li><a href='post-new.php'>Ajouter</a></li><li><a href='edit-tags.php?taxonomy=category'>Catégories</a></li><li><a href='edit-tags.php?taxonomy=post_tag'>Étiquettes</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" id="menu-media">
+	<a href='upload.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-media" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-media'><br /></div><div class='wp-menu-name'>Médias</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Médias</li><li class="wp-first-item"><a href='upload.php' class="wp-first-item">Bibliothèque</a></li><li><a href='media-new.php'>Ajouter</a></li><li><a href='upload.php?page=wp-smush-bulk'>WP Smush</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" id="menu-pages">
+	<a href='edit.php?post_type=page' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-page" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-page'><br /></div><div class='wp-menu-name'>Pages</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Pages</li><li class="wp-first-item"><a href='edit.php?post_type=page' class="wp-first-item">Toutes les pages</a></li><li><a href='post-new.php?post_type=page'>Ajouter</a></li></ul></li>
+	<li class="wp-not-current-submenu menu-top menu-icon-comments" id="menu-comments">
+	<a href='edit-comments.php' class="wp-not-current-submenu menu-top menu-icon-comments" ><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-comments'><br /></div><div class='wp-menu-name'>Commentaires <span class="awaiting-mod count-1"><span class="pending-count">1</span></span></div></a></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tcsn_portfolio" id="menu-posts-tcsn_portfolio">
+	<a href='edit.php?post_type=tcsn_portfolio' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tcsn_portfolio" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-portfolio'><br /></div><div class='wp-menu-name'>Portfolio Items</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Portfolio Items</li><li class="wp-first-item"><a href='edit.php?post_type=tcsn_portfolio' class="wp-first-item">Portfolio Items</a></li><li><a href='post-new.php?post_type=tcsn_portfolio'>Add New</a></li><li><a href='edit-tags.php?taxonomy=tcsn_portfoliotags&amp;post_type=tcsn_portfolio'>Portfolio Categories</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tcsn_pricing" id="menu-posts-tcsn_pricing">
+	<a href='edit.php?post_type=tcsn_pricing' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tcsn_pricing" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-cart'><br /></div><div class='wp-menu-name'>Pricing</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Pricing</li><li class="wp-first-item"><a href='edit.php?post_type=tcsn_pricing' class="wp-first-item">Pricing Columns</a></li><li><a href='post-new.php?post_type=tcsn_pricing'>Add New</a></li><li><a href='edit-tags.php?taxonomy=tcsn_pricingtags&amp;post_type=tcsn_pricing'>Pricing Categories</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_flamingo" id="toplevel_page_flamingo"><a href='admin.php?page=flamingo' class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_flamingo" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-feedback'><br /></div><div class='wp-menu-name'>Flamingo</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Flamingo</li><li class="wp-first-item"><a href='admin.php?page=flamingo' class="wp-first-item">Carnet d&rsquo;adresses</a></li><li><a href='admin.php?page=flamingo_inbound'>Messages entrants</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_wpcf7" id="toplevel_page_wpcf7"><a href='admin.php?page=wpcf7' class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_wpcf7" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-email'><br /></div><div class='wp-menu-name'>Contact</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Contact</li><li class="wp-first-item"><a href='admin.php?page=wpcf7' class="wp-first-item">Formulaires de contact</a></li><li><a href='admin.php?page=wpcf7-new'>Créer un formulaire</a></li><li><a href='admin.php?page=wpcf7-integration'>Intégration</a></li></ul></li>
+	<li class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top toplevel_page_EWD-UFAQ-Options menu-top-last" id="toplevel_page_EWD-UFAQ-Options"><a href='admin.php?page=EWD-UFAQ-Options' class="wp-has-submenu wp-has-current-submenu wp-menu-open menu-top toplevel_page_EWD-UFAQ-Options menu-top-last" ><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-format-chat'><br /></div><div class='wp-menu-name'>FAQs</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>FAQs</li><li class="wp-first-item current"><a href='admin.php?page=EWD-UFAQ-Options' class="wp-first-item current" aria-current="page">Dashboard</a></li><li><a href='edit.php?post_type=ufaq'>FAQs</a></li><li><a href='post-new.php?post_type=ufaq'>Add New</a></li><li><a href='edit-tags.php?taxonomy=ufaq-category&post_type=ufaq'>FAQ Categories</a></li><li><a href='edit-tags.php?taxonomy=ufaq-tag&post_type=ufaq'>FAQ Tags</a></li><li><a href='admin.php?page=EWD-UFAQ-Options&#038;DisplayPage=Options'>FAQ Settings</a></li><li><a href='admin.php?page=EWD-UFAQ-Options&#038;DisplayPage=Export'>FAQ Export</a></li><li><a href='admin.php?page=EWD-UFAQ-Options&#038;DisplayPage=ImportPosts'>FAQ Import</a></li></ul></li>
+	<li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first" id="menu-appearance">
+	<a href='themes.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-appearance menu-top-first" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-appearance'><br /></div><div class='wp-menu-name'>Apparence</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Apparence</li><li class="wp-first-item"><a href='themes.php' class="wp-first-item">Thèmes</a></li><li class="hide-if-no-customize"><a href='customize.php?return=%2Fwp-admin%2Fadmin.php%3Fpage%3DEWD-UFAQ-Options%26DisplayPage%3DExport%26Action%3DEWD_UFAQ_ExportToSpreadsheet' class="hide-if-no-customize">Personnaliser</a></li><li><a href='widgets.php'>Widgets</a></li><li><a href='nav-menus.php'>Menus</a></li><li><a href='themes.php?page=easy-custom-sidebars'>Theme Sidebars</a></li><li><a href='themes.php?page=optionsframework'>Theme Options</a></li><li><a href='theme-editor.php'>Éditeur</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" id="menu-plugins">
+	<a href='plugins.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-plugins" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-plugins'><br /></div><div class='wp-menu-name'>Extensions <span class='update-plugins count-5'><span class='plugin-count'>5</span></span></div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Extensions <span class='update-plugins count-5'><span class='plugin-count'>5</span></span></li><li class="wp-first-item"><a href='plugins.php' class="wp-first-item">Extensions installées</a></li><li><a href='plugin-install.php'>Ajouter</a></li><li><a href='plugin-editor.php'>Éditeur</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" id="menu-users">
+	<a href='users.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-users" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-users'><br /></div><div class='wp-menu-name'>Utilisateurs</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Utilisateurs</li><li class="wp-first-item"><a href='users.php' class="wp-first-item">Tous les utilisateurs</a></li><li><a href='user-new.php'>Ajouter</a></li><li><a href='profile.php'>Votre profil</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" id="menu-tools">
+	<a href='tools.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-tools" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-tools'><br /></div><div class='wp-menu-name'>Outils</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Outils</li><li class="wp-first-item"><a href='tools.php' class="wp-first-item">Outils disponibles</a></li><li><a href='import.php'>Importer</a></li><li><a href='export.php'>Exporter</a></li></ul></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" id="menu-settings">
+	<a href='options-general.php' class="wp-has-submenu wp-not-current-submenu menu-top menu-icon-settings menu-top-last" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-admin-settings'><br /></div><div class='wp-menu-name'>Réglages</div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>Réglages</li><li class="wp-first-item"><a href='options-general.php' class="wp-first-item">Général</a></li><li><a href='options-writing.php'>Écriture</a></li><li><a href='options-reading.php'>Lecture</a></li><li><a href='options-discussion.php'>Discussion</a></li><li><a href='options-media.php'>Médias</a></li><li><a href='options-permalink.php'>Permaliens</a></li><li><a href='options-general.php?page=akismet-key-config'>Akismet</a></li><li><a href='options-general.php?page=duplicatepost'>Duplicate Post</a></li><li><a href='options-general.php?page=breadcrumb-navxt'>Breadcrumb NavXT</a></li><li><a href='options-general.php?page=vc_settings'>Visual composer</a></li></ul></li>
+	<li class="wp-not-current-submenu wp-menu-separator" aria-hidden="true"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_wpseo_dashboard menu-top-first" id="toplevel_page_wpseo_dashboard"><a href='admin.php?page=wpseo_dashboard' class="wp-has-submenu wp-not-current-submenu menu-top toplevel_page_wpseo_dashboard menu-top-first" aria-haspopup="true"><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image svg' style="background-image:url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6IzgyODc4YyIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHJvbGU9ImltZyIgYXJpYS1oaWRkZW49InRydWUiIGZvY3VzYWJsZT0iZmFsc2UiPjxnPjxnPjxnPjxnPjxwYXRoIGQ9Ik0yMDMuNiwzOTVjNi44LTE3LjQsNi44LTM2LjYsMC01NGwtNzkuNC0yMDRoNzAuOWw0Ny43LDE0OS40bDc0LjgtMjA3LjZIMTE2LjRjLTQxLjgsMC03NiwzNC4yLTc2LDc2VjM1N2MwLDQxLjgsMzQuMiw3Niw3Niw3NkgxNzNDMTg5LDQyNC4xLDE5Ny42LDQxMC4zLDIwMy42LDM5NXoiLz48L2c+PGc+PHBhdGggZD0iTTQ3MS42LDE1NC44YzAtNDEuOC0zNC4yLTc2LTc2LTc2aC0zTDI4NS43LDM2NWMtOS42LDI2LjctMTkuNCw0OS4zLTMwLjMsNjhoMjE2LjJWMTU0Ljh6Ii8+PC9nPjwvZz48cGF0aCBzdHJva2Utd2lkdGg9IjIuOTc0IiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGQ9Ik0zMzgsMS4zbC05My4zLDI1OS4xbC00Mi4xLTEzMS45aC04OS4xbDgzLjgsMjE1LjJjNiwxNS41LDYsMzIuNSwwLDQ4Yy03LjQsMTktMTksMzcuMy01Myw0MS45bC03LjIsMXY3Nmg4LjNjODEuNywwLDExOC45LTU3LjIsMTQ5LjYtMTQyLjlMNDMxLjYsMS4zSDMzOHogTTI3OS40LDM2MmMtMzIuOSw5Mi02Ny42LDEyOC43LTEyNS43LDEzMS44di00NWMzNy41LTcuNSw1MS4zLTMxLDU5LjEtNTEuMWM3LjUtMTkuMyw3LjUtNDAuNywwLTYwbC03NS0xOTIuN2g1Mi44bDUzLjMsMTY2LjhsMTA1LjktMjk0aDU4LjFMMjc5LjQsMzYyeiIvPjwvZz48L2c+PC9zdmc+')"><br /></div><div class='wp-menu-name'>SEO <span class="update-plugins count-0"><span class="plugin-count" aria-hidden="true">0</span><span class="screen-reader-text">0 notification</span></span></div></a>
+	<ul class='wp-submenu wp-submenu-wrap'><li class='wp-submenu-head' aria-hidden='true'>SEO <span class="update-plugins count-0"><span class="plugin-count" aria-hidden="true">0</span><span class="screen-reader-text">0 notification</span></span></li><li class="wp-first-item"><a href='admin.php?page=wpseo_dashboard' class="wp-first-item">Réglages généraux</a></li><li><a href='admin.php?page=wpseo_titles'>Réglages SEO</a></li><li><a href='admin.php?page=wpseo_search_console'>Search Console</a></li><li><a href='admin.php?page=wpseo_social'>Réseaux sociaux</a></li><li><a href='admin.php?page=wpseo_tools'>Outils</a></li><li><a href='admin.php?page=wpseo_licenses'>Premium</a></li><li><a href='admin.php?page=wpseo_redirects'>Redirections</a></li></ul></li>
+	<li class="wp-not-current-submenu menu-top toplevel_page_revslider" id="toplevel_page_revslider">
+	<a href='admin.php?page=revslider' class="wp-not-current-submenu menu-top toplevel_page_revslider" ><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-update'><br /></div><div class='wp-menu-name'>Revolution Slider</div></a></li>
+	<li class="wp-not-current-submenu menu-top toplevel_page_themepunch-google-fonts menu-top-last" id="toplevel_page_themepunch-google-fonts">
+	<a href='admin.php?page=themepunch-google-fonts' class="wp-not-current-submenu menu-top toplevel_page_themepunch-google-fonts menu-top-last" ><div class="wp-menu-arrow"><div></div></div><div class='wp-menu-image dashicons-before dashicons-editor-textcolor'><br /></div><div class='wp-menu-name'>Punch Fonts</div></a></li><li id="collapse-menu" class="hide-if-no-js"><button type="button" id="collapse-button" aria-label="Replier le menu principal" aria-expanded="true"><span class="collapse-button-icon" aria-hidden="true"></span><span class="collapse-button-label">Réduire le menu</span></button></li></ul>
+</div>
+</div>
+<div id="wpcontent">
+
+		<div id="wpadminbar" class="nojq nojs">
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Barre d’outils" tabindex="0">
+				<ul id="wp-admin-bar-root-default" class="ab-top-menu">
+		<li id="wp-admin-bar-menu-toggle"><a class="ab-item" href="#"><span class="ab-icon"></span><span class="screen-reader-text">Menu</span></a>		</li>
+		<li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item" aria-haspopup="true" href="https://ecust.eu/wp-admin/about.php"><span class="ab-icon"></span><span class="screen-reader-text">À propos de WordPress</span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-wp-logo-default" class="ab-submenu">
+		<li id="wp-admin-bar-about"><a class="ab-item" href="https://ecust.eu/wp-admin/about.php">À propos de WordPress</a>		</li></ul><ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu">
+		<li id="wp-admin-bar-wporg"><a class="ab-item" href="https://wpfr.net">Site de WordPress-FR</a>		</li>
+		<li id="wp-admin-bar-documentation"><a class="ab-item" href="https://codex.wordpress.org/">Documentation</a>		</li>
+		<li id="wp-admin-bar-support-forums"><a class="ab-item" href="https://wpfr.net/support/">Forums d’entraide</a>		</li>
+		<li id="wp-admin-bar-feedback"><a class="ab-item" href="https://wordpress.org/support/forum/requests-and-feedback">Remarque</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-site-name" class="menupop"><a class="ab-item" aria-haspopup="true" href="https://ecust.eu/">Logiciel de gestion d&#039;entreprise po&hellip;</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-site-name-default" class="ab-submenu">
+		<li id="wp-admin-bar-view-site"><a class="ab-item" href="https://ecust.eu/">Aller sur le site</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-updates"><a class="ab-item" href="https://ecust.eu/wp-admin/update-core.php" title="1 mise à jour de WordPress, 5 mises à jour d’extensions, 6 mises à jour de thèmes"><span class="ab-icon"></span><span class="ab-label">12</span><span class="screen-reader-text">1 mise à jour de WordPress, 5 mises à jour d’extensions, 6 mises à jour de thèmes</span></a>		</li>
+		<li id="wp-admin-bar-comments"><a class="ab-item" href="https://ecust.eu/wp-admin/edit-comments.php"><span class="ab-icon"></span><span class="ab-label awaiting-mod pending-count count-1" aria-hidden="true">1</span><span class="screen-reader-text">1 commentaire en attente de modération</span></a>		</li>
+		<li id="wp-admin-bar-new-content" class="menupop"><a class="ab-item" aria-haspopup="true" href="https://ecust.eu/wp-admin/post-new.php"><span class="ab-icon"></span><span class="ab-label">Créer</span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-new-content-default" class="ab-submenu">
+		<li id="wp-admin-bar-new-post"><a class="ab-item" href="https://ecust.eu/wp-admin/post-new.php">Article</a>		</li>
+		<li id="wp-admin-bar-new-media"><a class="ab-item" href="https://ecust.eu/wp-admin/media-new.php">Fichier média</a>		</li>
+		<li id="wp-admin-bar-new-page"><a class="ab-item" href="https://ecust.eu/wp-admin/post-new.php?post_type=page">Page</a>		</li>
+		<li id="wp-admin-bar-new-ufaq"><a class="ab-item" href="https://ecust.eu/wp-admin/post-new.php?post_type=ufaq">FAQ</a>		</li>
+		<li id="wp-admin-bar-new-tcsn_portfolio"><a class="ab-item" href="https://ecust.eu/wp-admin/post-new.php?post_type=tcsn_portfolio">Portfolio Item</a>		</li>
+		<li id="wp-admin-bar-new-tcsn_pricing"><a class="ab-item" href="https://ecust.eu/wp-admin/post-new.php?post_type=tcsn_pricing">Pricing Column</a>		</li>
+		<li id="wp-admin-bar-new-user"><a class="ab-item" href="https://ecust.eu/wp-admin/user-new.php">Utilisateur</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-wpseo-menu" class="menupop"><a class="ab-item" aria-haspopup="true" href="https://ecust.eu/wp-admin/admin.php?page=wpseo_dashboard"><div id="yoast-ab-icon" class="ab-item yoast-logo svg"><span class="screen-reader-text">SEO</span></div></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-wpseo-menu-default" class="ab-submenu">
+		<li id="wp-admin-bar-wpseo-configuration-wizard"><a class="ab-item" href="https://ecust.eu/wp-admin/admin.php?page=wpseo_configurator">Assistant de configuration</a>		</li>
+		<li id="wp-admin-bar-wpseo-kwresearch" class="menupop"><div class="ab-item ab-empty-item" tabindex="0" aria-haspopup="true">Recherche de mots-clés</div><div class="ab-sub-wrapper"><ul id="wp-admin-bar-wpseo-kwresearch-default" class="ab-submenu">
+		<li id="wp-admin-bar-wpseo-kwresearchtraining"><a class="ab-item" href="https://yoa.st/wp-admin-bar?php_version=5.5.9&#038;platform=wordpress&#038;platform_version=4.9.4&#038;software=premium&#038;software_version=8.3&#038;role=administrator&#038;days_active=1490" target="_blank">Formation à la recherche de mots-clés</a>		</li>
+		<li id="wp-admin-bar-wpseo-adwordsexternal"><a class="ab-item" href="https://adwords.google.com/keywordplanner" target="_blank">AdWords External</a>		</li>
+		<li id="wp-admin-bar-wpseo-googleinsights"><a class="ab-item" href="https://www.google.com/trends/explore" target="_blank">Tendances Google</a>		</li>
+		<li id="wp-admin-bar-wpseo-wordtracker"><a class="ab-item" href="http://tools.seobook.com/keyword-tools/seobook/" target="_blank">SEO Book</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-wpseo-settings" class="menupop"><div class="ab-item ab-empty-item" tabindex="0" aria-haspopup="true">Réglages SEO</div><div class="ab-sub-wrapper"><ul id="wp-admin-bar-wpseo-settings-default" class="ab-submenu">
+		<li id="wp-admin-bar-wpseo-general"><a class="ab-item" href="https://ecust.eu/wp-admin/admin.php?page=wpseo_dashboard">Réglages généraux</a>		</li>
+		<li id="wp-admin-bar-wpseo-titles"><a class="ab-item" href="https://ecust.eu/wp-admin/admin.php?page=wpseo_titles">Réglages SEO</a>		</li>
+		<li id="wp-admin-bar-wpseo-search-console"><a class="ab-item" href="https://ecust.eu/wp-admin/admin.php?page=wpseo_search_console">Search Console</a>		</li>
+		<li id="wp-admin-bar-wpseo-social"><a class="ab-item" href="https://ecust.eu/wp-admin/admin.php?page=wpseo_social">Réseaux sociaux</a>		</li>
+		<li id="wp-admin-bar-wpseo-tools"><a class="ab-item" href="https://ecust.eu/wp-admin/admin.php?page=wpseo_tools">Outils</a>		</li>
+		<li id="wp-admin-bar-wpseo-licenses"><a class="ab-item" href="https://ecust.eu/wp-admin/admin.php?page=wpseo_licenses">Premium</a>		</li></ul></div>		</li></ul></div>		</li></ul><ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+		<li id="wp-admin-bar-my-account" class="menupop with-avatar"><a class="ab-item" aria-haspopup="true" href="https://ecust.eu/wp-admin/profile.php">Bonjour, <span class="display-name">samuel</span><img alt='' src='https://secure.gravatar.com/avatar/6006b8d5f48614f67b351d2d8456319a?s=26&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/6006b8d5f48614f67b351d2d8456319a?s=52&#038;d=mm&#038;r=g 2x' class='avatar avatar-26 photo' height='26' width='26' /></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-user-actions" class="ab-submenu">
+		<li id="wp-admin-bar-user-info"><a class="ab-item" tabindex="-1" href="https://ecust.eu/wp-admin/profile.php"><img alt='' src='https://secure.gravatar.com/avatar/6006b8d5f48614f67b351d2d8456319a?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/6006b8d5f48614f67b351d2d8456319a?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' /><span class='display-name'>samuel</span></a>		</li>
+		<li id="wp-admin-bar-edit-profile"><a class="ab-item" href="https://ecust.eu/wp-admin/profile.php">Modifier mon profil</a>		</li>
+		<li id="wp-admin-bar-logout"><a class="ab-item" href="https://ecust.eu/wp-login.php?action=logout&#038;_wpnonce=d395c88797">Se déconnecter</a>		</li></ul></div>		</li></ul>			</div>
+						<a class="screen-reader-shortcut" href="https://ecust.eu/wp-login.php?action=logout&#038;_wpnonce=d395c88797">Se déconnecter</a>
+					</div>
+
+		
+<div id="wpbody" role="main">
+
+<div id="wpbody-content" aria-label="Contenu principal" tabindex="0">
+		<div id="screen-meta" class="metabox-prefs">
+
+			<div id="contextual-help-wrap" class="hidden no-sidebar" tabindex="-1" aria-label="Onglet d&rsquo;aide contextuelle">
+				<div id="contextual-help-back"></div>
+				<div id="contextual-help-columns">
+					<div class="contextual-help-tabs">
+						<ul>
+												</ul>
+					</div>
+
+					
+					<div class="contextual-help-tabs-wrap">
+											</div>
+				</div>
+			</div>
+				</div>
+		<div class='update-nag'><a href="https://codex.wordpress.org/Version_5.9.3">WordPress 5.9.3</a> est disponible ! <a href="https://ecust.eu/wp-admin/update-core.php" aria-label="Veuillez mettre WordPress à jour maintenant">Veuillez faire la mise à jour maintenant</a>.</div>			<div class="notice smush-notice" style="display: none;">
+				<div class="smush-notice-logo"><span></span></div>
+				<div
+					class="smush-notice-message wp-smush-existing">
+					<strong>Thanks for upgrading Smush!</strong>
+					Did you know she has secret super powers? Yes, she can super-smush images for double the savings, store original images, and bulk smush thousands of images in one go. Get started with a free WPMU DEV trial to access these advanced features.				</div>
+				<div class="smush-notice-cta">
+					<a href="https://premium.wpmudev.org/project/wp-smush-pro/?utm_source=Smush-Free&#038;utm_medium=Banner&#038;utm_campaign=try-pro-free" class="smush-notice-act button-primary" target="_blank">
+					Try Smush Pro Free					</a>
+					<button class="smush-notice-dismiss smush-dismiss-welcome" data-msg="Saving">Dismiss</button>
+				</div>
+			</div>		<div class="wrap">
+		<div class="Header"><h2>Ultimate FAQ Settings</h2></div>
+
+		
+					<div class="ewd-ufaq-dashboard-new-upgrade-banner">
+				<div class="ewd-ufaq-dashboard-banner-icon"></div>
+				<div class="ewd-ufaq-dashboard-banner-buttons">
+					<a class="ewd-ufaq-dashboard-new-upgrade-button" href="http://www.etoilewebdesign.com/plugins/ultimate-faq/#buy" target="_blank">UPGRADE NOW</a>
+									</div>
+				<div class="ewd-ufaq-dashboard-banner-text">
+					<div class="ewd-ufaq-dashboard-banner-title">
+						GET FULL ACCESS WITH OUR PREMIUM VERSION
+					</div>
+					<div class="ewd-ufaq-dashboard-banner-brief">
+						Easily customize, administer and share your FAQs
+					</div>
+				</div>
+			</div>
+		
+		
+	<div class="EWD_UFAQ_Menu">
+		<h2 class="nav-tab-wrapper">
+		<a id="ewd-ufaq-dash-mobile-menu-open" href="#" class="MenuTab nav-tab">MENU<span id="ewd-ufaq-dash-mobile-menu-down-caret">&nbsp;&nbsp;&#9660;</span><span id="ewd-ufaq-dash-mobile-menu-up-caret">&nbsp;&nbsp;&#9650;</span></a>
+		<a id="Dashboard_Menu" href='admin.php?page=EWD-UFAQ-Options' class="MenuTab nav-tab ">Dashboard</a>
+					<a id="FAQs_Menu" href='edit.php?post_type=ufaq' class="MenuTab nav-tab ">FAQs</a>
+				<a id="Add_New_Menu" href='post-new.php?post_type=ufaq' class="MenuTab nav-tab ">Add New</a>
+		<a id="FAQ_Categories_Menu" href='edit-tags.php?taxonomy=ufaq-category&post_type=ufaq' class="MenuTab nav-tab ">Categories</a>
+		<a id="FAQ_Categories_Menu" href='edit-tags.php?taxonomy=ufaq-tag&post_type=ufaq' class="MenuTab nav-tab ">Tags</a>
+		<a id="Options_Menu" href='admin.php?page=EWD-UFAQ-Options&DisplayPage=Options' class="MenuTab nav-tab ">Settings</a>
+		<a id="WooCommerce_Import_Menu" href='admin.php?page=EWD-UFAQ-Options&DisplayPage=Export' class="MenuTab nav-tab nav-tab-active">Export</a>
+		<a id="WooCommerce_Import_Menu" href='admin.php?page=EWD-UFAQ-Options&DisplayPage=ImportPosts' class="MenuTab nav-tab ">Import</a>
+		</h2>
+	</div>
+		<div class="wrap">
+
+	<div class="ewd-ufaq-import-export-container">
+
+		<div id="icon-options-general" class="icon32"><br /></div><h2>Export</h2>
+
+		
+		<form method="post" action="admin.php?page=EWD-UFAQ-Options&DisplayPage=Export&Action=EWD_UFAQ_ExportToPDF">
+		<table class="form-table">
+		</table>
+
+
+		<p class="submit"><input type="submit" name="Export_Submit" id="submit" class="button button-primary" value="Export to PDF"  /></p></form>
+
+		<form method="post" action="admin.php?page=EWD-UFAQ-Options&DisplayPage=Export&Action=EWD_UFAQ_ExportToSpreadsheet">
+		<table class="form-table">
+		</table>
+
+
+		<p class="submit"><input type="submit" name="Export_Submit" id="submit" class="button button-primary" value="Export to Spreadsheet"  /></p></form>
+
+	</div> <!--ewd-ufaq-import-export-container-->
+
+</div></div>
+<div class="clear"></div></div><!-- wpbody-content -->
+<div class="clear"></div></div><!-- wpbody -->
+<div class="clear"></div></div><!-- wpcontent -->
+
+<div id="wpfooter" role="contentinfo">
+		<p id="footer-left" class="alignleft">
+		<span id="footer-thankyou">Merci de faire de <a href="https://wpfr.net">WordPress</a> votre outil de création.</span>	</p>
+	<p id="footer-upgrade" class="alignright">
+		<strong><a href="https://ecust.eu/wp-admin/update-core.php">Obtenir la version 5.9.3</a></strong>	</p>
+	<div class="clear"></div>
+</div>
+<script type="text/html" id="vcl-loop-frame">
+    <div class="vc_row">
+        <div class="vc_col-sm-12">
+            <# if(vc.loop_field_not_hidden('post_type', loop)) { #>
+                <label class="wpb_element_label">Types de post</label>
+
+                <div class="post-types-list">
+                    {{{ vc.loop_partial('checkboxes', 'post_type', loop) }}}
+                </div>
+                <span class="description clear">Select post types to populate posts from. Note: If no post type is selected, WordPress will use default "Post" value.</span>
+                <# } #>
+        </div>
+    </div>
+    <div class="vc_row">
+        <# if(vc.loop_field_not_hidden('size', loop)) { #>
+            <div class="vc_col-sm-4">
+                <label class="wpb_element_label">Compteur de posts</label>
+                {{{ vc.loop_partial('text-input', 'size', loop) }}}
+                <span class="description clear">Combien de teasers doivent être affichés? Entre un nombre ou le mot \"tout\"</span>
+            </div>
+            <# } #>
+                <# if(vc.loop_field_not_hidden('order_by', loop)) { #>
+                    <div class="vc_col-sm-4">
+                        <label class="wpb_element_label">Ordre par</label>
+                        {{{ vc.loop_partial('dropdown', 'order_by', loop) }}}
+                        <span class="description clear">Sélectionnez comment arranger les articles trouvés. Plus dans  <a href="http://codex.wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters" target="_blank">
+                            WordPress codex page</a>.</span>
+                    </div>
+                    <# } #>
+                        <# if(vc.loop_field_not_hidden('order', loop)) { #>
+                            <div class="vc_col-sm-4">
+                                <label class="wpb_element_label">Odre</label>
+                                {{{ vc.loop_partial('dropdown', 'order', loop) }}}
+                                <span class="description clear">Designates the ascending or descending order.</span>
+                            </div>
+                            <# } #>
+    </div>
+
+    <# if(vc.loop_field_not_hidden('categories', loop)) { #>
+        <div class="vc_row">
+            <div class="vc_col-sm-12">
+                <div class="vc_suggest-field" data-block="suggestion">
+                    <label class="wpb_element_label">Catégories</label>
+                    {{{ vc.loop_partial('autosuggest', 'categories', loop) }}}
+                    <span class="description clear">Filter output by posts categories, enter category names here.</span>
+                </div>
+            </div>
+        </div>
+        <# } #>
+            <# if(vc.loop_field_not_hidden('tags', loop)) { #>
+                <div class="vc_row">
+                    <div class="vc_col-sm-12">
+                        <div class="vc_suggest-field" data-block="suggestion">
+                            <label class="wpb_element_label">Tags</label>
+                            {{{ vc.loop_partial('autosuggest', 'tags', loop) }}}
+                            <span class="description clear">Filter output by posts tags, enter tag names here.</span>
+                        </div>
+                    </div>
+                </div>
+                <# } #>
+                    <# if(vc.loop_field_not_hidden('tax_query', loop)) { #>
+                        <div class="vc_row">
+                            <div class="vc_col-sm-12">
+                                <div class="vc_suggest-field" data-block="suggestion">
+                                    <label class="wpb_element_label">Taxonomies</label>
+                                    {{{ vc.loop_partial('autosuggest', 'tax_query', loop) }}}
+                                    <span class="description clear">Filter output by custom taxonomies categories, enter category names here.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <# } #>
+                            <# if(vc.loop_field_not_hidden('by_id', loop)) { #>
+                                <div class="vc_row">
+                                    <div class="vc_col-sm-12">
+                                        <div class="vc_suggest-field" data-block="suggestion">
+                                            <label class="wpb_element_label">Individual Posts/Pages/Custom Post Types</label>
+                                            {{{ vc.loop_partial('autosuggest', 'by_id', loop) }}}
+                                            <span class="description clear">Only entered posts/pages will be included in the output. Note: Works in conjunction with selected "Post types".</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <# } #>
+                                    <# if(vc.loop_field_not_hidden('authors', loop)) { #>
+                                        <div class="vc_row">
+                                            <div class="vc_col-sm-12">
+                                                <div class="vc_suggest-field" data-block="suggestion">
+                                                    <label class="wpb_element_label">Auteur</label>
+                                                    {{{ vc.loop_partial('autosuggest', 'authors', loop) }}}
+                                                    <span class="description clear">Filter by author name.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <# } #>
+</script>
+<script type="text/html" id="_vcl-text-input">
+    <#
+            var is_locked = vc.is_locked(data),
+            disabled = is_locked  ? ' disabled="true"' : '',
+            value = _.isObject(data) && !_.isUndefined(data.value) ? data.value : '';
+            #>
+        <input type="text" name="{{ name }}" value="{{ value }}" class="vc_{{ name }}_field"{{ disabled }}>
+</script>
+<script type="text/html" id="_vcl-dropdown">
+    <#
+            var is_locked = vc.is_locked(data),
+            disabled = is_locked  ? ' disabled="true"' : '';
+            #>
+        <select name="{{ name }}" class="vc_dropdown"{{ disabled }}>
+        <option value=""></option>
+        <# if(_.isObject(data) && _.isArray(data.options)) { #>
+            <#
+                    _.each(data.options, function(opt) {
+                    var value, label;
+                    if(_.isArray(opt)) {
+                    value = opt[0];
+                    label = opt[1];
+                    } else {
+                    value = opt;
+                    label = opt;
+                    }#>
+                <option value="{{ value }}"
+                {{ data.value===value ? ' selected="true"' : '' }}>{{ label }}</option>
+                <#
+                        });
+                        #>
+                    <# } #>
+                        </select>
+</script>
+<script type="text/html" id="_vcl-checkboxes">
+    <#
+            var is_locked = vc.is_locked(data);
+            #>
+        <input type="hidden" name="{{ name }}" value="{{ data.value }}" data-name="{{ name }}">
+        <# if(_.isObject(data) && _.isArray(data.options)) {
+                _.each(data.options, function(opt) {
+                var value, label, params;
+                if(_.isArray(opt)) {
+                value = opt[0];
+                label = opt[1];
+                } else {
+                value = opt;
+                label = opt;
+                }
+                params = _.indexOf(data.value, value) >=0 ? ' checked="true"' : '';
+            if(!_.isEmpty(params) && is_locked) params += ' disabled="true"';
+            #>
+            <label><input type="checkbox" data-input="{{ name }}" value="{{ value }}"{{ params }}/> {{ label }}</label>
+            <#
+                    });
+                    } #>
+</script>
+<script type="text/html" id="_vcl-autosuggest">
+    <# limit_param = _.isObject(settings) && !_.isUndefined(settings.limit) ? ' data-limit="' + settings.limit + '"' : ''; #>
+        <input type="hidden" data-suggest-prefill="{{ name }}"
+               value="{{ _.isObject(data) && _.isArray(data.options) ? window.encodeURIComponent(JSON.stringify(data.options)) : '' }}">
+        <input type="hidden" name="{{ name }}"
+               value="{{ _.isObject(data) && _.isArray(data.value) ? data.value.join(',') : '' }}"
+               data-suggest-value="{{ name }}">
+        <input type="text" name="{{ name }}_autosuggest" value=""
+               placeholder="Click here and start typing..." class="vc_{{ name }}_field"
+               data-suggest="{{ name }}"{{ limit_param }} />
+</script><script type="text/html" id="vcl-options-field-input">
+    <div class="vc_row">
+        <div class="vc_col-sm-12">
+            <label class="wpb_element_label">{{ label }}</label>
+            <input type="text" name="{{ name }}" value="{{ value[0] }}">
+
+            <div class="descr"><i>{{ description }}</i></div>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="vcl-options-field-select">
+    <div class="vc_row">
+        <div class="vc_col-sm-12">
+            <label class="wpb_element_label">{{ label }}</label>
+            <select name="{{ name }}">
+                <# _.each(options, function(option) { #>
+                    <# if(_.isArray(option)) { #>
+                        <option value="{{ option[0] }}"
+                        {{ value[0]===option[0] ? ' selected="true"' : '' }}>{{ option[1] }}</option>
+                        <# } else { #>
+                            <option value="{{ option }}"
+                            {{ value[0]===option ? ' selected="true"' : '' }}>{{ option }}</option>
+                            <# } #>
+                                <# }); #>
+            </select>
+
+            <div class="descr"><i>{{ description }}</i></div>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="vcl-options-field-checkbox">
+    <div class="vc_row">
+        <div class="vc_col-sm-12">
+            <label class="wpb_element_label">{{ label }}</label>
+
+            <div class="vc_options-checkboxes">
+                <# _.each(options, function(option) { #>
+                    <label><input type="checkbox" name="{{ name }}" value="{{ option[0] }}"{{ _.indexOf(value,
+                        option[0]) > -1 ? ' checked="true"' : '' }}> {{ option[1] }}</label>
+                    <# }); #>
+            </div>
+            <div class="descr"><i>{{ description }}</i></div>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="vcl-options-field-boolean">
+    <div class="vc_row">
+        <div class="vc_col-sm-12">
+            <label class="wpb_element_label">{{ label }}</label>
+
+            <div class="vc_options-checkbox">
+                <label><input type="checkbox" name="{{ name }}" value="true"{{ value[0]==='true' ? ' checked="true"' :
+                    '' }}> Oui</label>
+            </div>
+            <div class="descr"><i>{{ description }}</i></div>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="vcl-options-field-separator">
+    <h4>{{label}}</h4>
+</script>	<div id="wp-auth-check-wrap" class="hidden">
+	<div id="wp-auth-check-bg"></div>
+	<div id="wp-auth-check">
+	<button type="button" class="wp-auth-check-close button-link"><span class="screen-reader-text">Fermez la boîte de dialogue</span></button>
+			<div id="wp-auth-check-form" class="loading" data-src="https://ecust.eu/wp-login.php?interim-login=1&#038;wp_lang=fr_FR"></div>
+			<div class="wp-auth-fallback">
+		<p><b class="wp-auth-fallback-expired" tabindex="0">La session a expiré</b></p>
+		<p><a href="https://ecust.eu/wp-login.php" target="_blank">Veuillez vous reconnecter.</a>
+		La page de connexion s’ouvrira dans une nouvelle fenêtre. Après votre connexion, vous pourrez la fermer et revenir à cette page.</p>
+	</div>
+	</div>
+	</div>
+	<link rel='stylesheet' id='ewd-ufaq-admin-css'  href='https://ecust.eu/wp-content/plugins/ultimate-faqs/css/Admin.css?ver=1.6.17' type='text/css' media='all' />
+<link rel='stylesheet' id='ewd-ufaq-spectrum-css'  href='https://ecust.eu/wp-content/plugins/ultimate-faqs/css/spectrum.css?ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-smushit-notice-css-css'  href='https://ecust.eu/wp-content/plugins/wp-smushit/assets/css/notice.css?ver=2.7.8' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpseoAdminGlobalL10n = {"variable_warning":"Avertissement\u00a0: la variable <code>%s<\/code> ne peut pas \u00eatre utilis\u00e9e dans ce mod\u00e8le. Consultez le centre d\u2019aide pour plus d\u2019informations.","dismiss_about_url":"\/wp-admin\/admin.php?page=EWD-UFAQ-Options&DisplayPage=Export&Action=EWD_UFAQ_ExportToSpreadsheet&wpseo-dismiss-about=1&nonce=e3aff297f4","dismiss_tagline_url":"\/wp-admin\/admin.php?page=EWD-UFAQ-Options&DisplayPage=Export&Action=EWD_UFAQ_ExportToSpreadsheet&wpseo-dismiss-tagline-notice=1&nonce=a18359c940","help_video_iframe_title":"Tutoriel vid\u00e9o de Yoast SEO","scrollable_table_hint":"Faire d\u00e9filer pour voir le contenu du tableau."};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var yoastModalConfig = [];
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var smush_vars = {"strings":{"stats_label":"Smush Stats"},"nonce":{"get_smush_status":"fd0f893308"}};
+/* ]]> */
+</script>
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var commonL10n = {"warnDelete":"Vous \u00eates en train de supprimer d\u00e9finitivement ces \u00e9l\u00e9ments de votre site.\nCette action ne peut pas \u00eatre annul\u00e9e.\n\u00ab\u00a0Annuler\u00a0\u00bb pour arr\u00eater, \u00ab\u00a0OK\u00a0\u00bb pour supprimer.","dismiss":"Ne pas tenir compte de ce message.","collapseMenu":"Replier le menu principal","expandMenu":"D\u00e9plier le menu principal"};var heartbeatSettings = {"nonce":"a5104617a4"};var authcheckL10n = {"beforeunload":"Votre session a expir\u00e9. Vous pouvez vous reconnecter depuis cette page ou aller \u00e0 la page de connexion.","interval":"180"};var thickboxL10n = {"next":"Suiv.\u00a0>","prev":"<\u00a0Pr\u00e9c.","image":"Image","of":"sur","close":"Fermer","noiframes":"Cette fonctionnalit\u00e9 requiert des iframes. Les iframes sont d\u00e9sactiv\u00e9es sur votre navigateur, ou alors il ne les accepte pas.","loadingAnimation":"https:\/\/ecust.eu\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};var _wpMediaModelsL10n = {"settings":{"ajaxurl":"\/wp-admin\/admin-ajax.php","post":{"id":0}}};var pluploadL10n = {"queue_limit_exceeded":"Vous essayez d\u2019envoyer trop de fichiers \u00e0 la fois.","file_exceeds_size_limit":"%s d\u00e9passe la limite d\u2019envoi de ce site.","zero_byte_file":"Le fichier est vide. Merci d\u2019en essayer un autre.","invalid_filetype":"D\u00e9sol\u00e9, ce type de fichier n\u2019est pas autoris\u00e9 pour des raisons de s\u00e9curit\u00e9.","not_an_image":"Ce fichier n\u2019est pas une image. Veuillez en envoyer un autre.","image_memory_exceeded":"M\u00e9moire d\u00e9pass\u00e9e. Veuillez r\u00e9essayer avec un fichier plus petit.","image_dimensions_exceeded":"Ce fichier est plus grand que la taille maximale. Veuillez en envoyer un autre.","default_error":"Une erreur est survenue lors du t\u00e9l\u00e9versement. Veuillez r\u00e9essayer plus tard.","missing_upload_url":"Il y a une erreur de configuration. Veuillez contacter l\u2019administrateur de votre serveur.","upload_limit_exceeded":"Vous pouvez uniquement t\u00e9l\u00e9verser 1 fichier.","http_error":"Erreur HTTP.","upload_failed":"L\u2019envoi a \u00e9chou\u00e9.","big_upload_failed":"Veuillez essayer de t\u00e9l\u00e9verser ce fichier \u00e0 l\u2019aide de l\u2019%1$soutil de t\u00e9l\u00e9versement%2$s.","big_upload_queued":"%s d\u00e9passe la limite d\u2019envoi pour l\u2019outil de mise ne ligne multiple utilis\u00e9 avec votre navigateur.","io_error":"Erreur I\/O (entr\u00e9es-sorties).","security_error":"Erreur de s\u00e9curit\u00e9.","file_cancelled":"Fichier annul\u00e9.","upload_stopped":"L\u2019envoi est stopp\u00e9.","dismiss":"Fermer","crunching":"En cours de traitement\u2026","deleted":"d\u00e9plac\u00e9 dans la corbeille.","error_uploading":"\u00ab\u00a0%s\u00a0\u00bb n\u2019a pas pu \u00eatre t\u00e9l\u00e9vers\u00e9."};var wpApiSettings = {"root":"https:\/\/ecust.eu\/wp-json\/","nonce":"4656cd7cc7","versionString":"wp\/v2\/"};/* ]]> */
+</script>
+<script type='text/javascript' src='https://ecust.eu/wp-admin/load-scripts.php?c=0&amp;load%5B%5D=hoverIntent,common,admin-bar,svg-painter,heartbeat,wp-auth-check,jquery-ui-core,jquery-ui-widget,jquery-ui-mouse,jquery-ui-sorta&amp;load%5B%5D=ble,thickbox,underscore,backbone,wp-util,wp-backbone,media-models,wp-plupload,wp-mediaelement,wp-api-request,media-views,shortco&amp;load%5B%5D=de,media-editor,media-grid&amp;ver=4.9.4'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-content/plugins/wordpress-seo-premium/js/dist/babel-polyfill-830.min.js?ver=8.3'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-content/plugins/wordpress-seo-premium/js/dist/commons-830.min.js?ver=8.3'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-content/plugins/wordpress-seo-premium/js/dist/wp-seo-admin-global-830.min.js?ver=8.3'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-content/plugins/wordpress-seo-premium/js/vendor/lodash.min.js?ver=4.9.4'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-content/plugins/wordpress-seo-premium/js/vendor/lodash-noconflict.js?ver=4.9.4'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-content/plugins/wordpress-seo-premium/js/dist/wp-seo-wp-globals-backport-830.min.js?ver=8.3'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-content/plugins/wordpress-seo-premium/js/dist/analysis-830.min.js?ver=8.3'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-content/plugins/wordpress-seo-premium/js/dist/components-830.min.js?ver=8.3'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-content/plugins/wordpress-seo-premium/js/dist/wp-seo-modal-830.min.js?ver=8.3'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-content/plugins/wp-smushit/assets/js/media.js?ver=2.7.8'></script>
+<script type='text/javascript' src='https://ecust.eu/wp-content/plugins/wp-smushit/assets/js/notice.js?ver=2.7.8'></script>
+
+<div class="clear"></div></div><!-- wpwrap -->
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+</body>
+</html>
