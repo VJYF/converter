@@ -20,14 +20,14 @@ print(pathlist)
 for x in os.listdir(pathlist):
     if x.endswith(".csv"):
 
-        name = x.split(".")
-        stringname = x
-        stringname = re.sub(".csv","",stringname)
+        # name = x.split("\.")
+        # stringname = x
+        stringname = re.sub("\\..*","",x)
 
         print(stringname)
 
         # Reading the csv file
-        df_new = pd.read_csv(pathlist+ x, sep=";", on_bad_lines='skip', encoding='latin-1')
+        df_new = pd.read_csv(pathlist+ x, sep=";", error_bad_lines='False', encoding='latin-1')
         
         
         mid = str(n)
@@ -36,6 +36,7 @@ for x in os.listdir(pathlist):
             os.makedirs(pathlist + '/ConvertDONE')
         pathlist2 =os.path.join(Newpath,'csv\\ConvertDONE\\')
         print(pathlist2)
+
         # saving xlsx file
         GFG = pd.ExcelWriter(pathlist2 + 'Converted_'+stringname+end )
         df_new.to_excel(GFG, index=False)
