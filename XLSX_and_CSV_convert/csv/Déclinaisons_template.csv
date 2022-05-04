@@ -1,2 +1,0 @@
-ID Produit;Référence produit;Attributs (Nom:Type:Position);Valeur (Valeur:Position)*;Référence du fournisseur;Reference;EAN13;UPC;MPN;Prix de gros;Impact sur le prix;Ecotax;Quantité;quantité minimun;Faible niveau de stock;M'envoyer un mail quand la quantité est en dessous de ce nombre;Impact sur le poids;Default (0 = Non, 1 = oui);Date de disponibilité de la combinaison;Position image;Image URLs (x,y,z...);Image alt textes (x,y,z...);ID / Nom du magasin;Gestion avancée des stocks;"Dépend des stocks
-";Entrepôt
